@@ -1,3 +1,5 @@
+# Deploy
+Delete package-lock.json before commit and push
 # Redux Toolkit
 
 #### React Course

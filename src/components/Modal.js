@@ -1,13 +1,14 @@
 import { closeModal } from "../features/modal/modalSlice";
 import { useDispatch } from "react-redux";
-import { clearCart } from "../features/cart/cartSlice";
+// import { clearCart } from "../features/cart/cartSlice";
+import { clearCart } from "../features/tour/tourSlice";
 
 const Modal = () => {
   const dispatch = useDispatch();
   return (
     <aside className="modal-container">
       <div className="modal">
-        <h4>remove all items from your shoping cart?</h4>
+        <h4>remove all items from your Tour cart?</h4>
         <div className="btn-container">
           <button
             type="button"
