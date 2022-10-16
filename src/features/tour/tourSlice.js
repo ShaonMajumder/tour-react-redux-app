@@ -42,7 +42,11 @@ const tourSlice = createSlice({
     clearCart: (state) => {
       state.tourItems = [];
     },
-    
+    removeItem: (state, action) => {
+      const itemId = action.payload;
+      console.log(itemId)
+      state.cartItems = state.tourItems.filter((item) => item.id !== itemId);
+    },
   },
   extraReducers: {
     [getTourItems.pending]: (state) => {
@@ -61,6 +65,6 @@ const tourSlice = createSlice({
 });
 
 //console.log(tourSlice);
-export const { clearCart} = tourSlice.actions;
+export const { clearCart, removeItem} = tourSlice.actions;
 
 export default tourSlice.reducer;

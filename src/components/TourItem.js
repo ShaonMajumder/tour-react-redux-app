@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronUp } from "../icons";
 // import { removeItem, increase, decrease } from "../features/cart/cartSlice";
-import { clearCart } from "../features/tour/tourSlice";
+import { clearCart,removeItem } from "../features/tour/tourSlice";
 
 import { useDispatch } from "react-redux";
 
@@ -16,7 +16,7 @@ const CartItem = ({ id, name, info, image, price }) => {
         <button
           className="remove-btn"
           onClick={() => {
-            dispatch(clearCart());
+            dispatch(removeItem(id));
           }}
         >
           remove
